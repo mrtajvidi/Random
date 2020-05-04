@@ -3,3 +3,10 @@
 ################################################################################
 
 /.vs/Random/v16
+/Random/.vs/Random
+/Random/bin/Debug/netcoreapp3.1
+/Random/obj
+/Random.Logic/bin/Debug/netstandard2.0
+/Random.Logic/obj
+/Random.Tests/bin/Debug/netcoreapp3.1
+/Random.Tests/obj
