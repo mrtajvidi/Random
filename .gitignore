@@ -10,3 +10,5 @@
 /Random.Logic/obj
 /Random.Tests/bin/Debug/netcoreapp3.1
 /Random.Tests/obj
+*.v2
+*.user

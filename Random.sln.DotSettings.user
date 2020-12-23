@@ -1,4 +1,164 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0e09ec06_002Defd0_002D4f16_002D9a41_002Dacfefda96e9b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="MyAtoi_Works_True" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;Or&gt;&#xD;
+      &lt;Or&gt;&#xD;
+        &lt;TestAncestor&gt;&#xD;
+          &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.MyAtoi_Works_True&lt;/TestId&gt;&#xD;
+        &lt;/TestAncestor&gt;&#xD;
+        &lt;TestAncestor&gt;&#xD;
+          &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.IsValid_Works_True&lt;/TestId&gt;&#xD;
+        &lt;/TestAncestor&gt;&#xD;
+      &lt;/Or&gt;&#xD;
+      &lt;TestAncestor&gt;&#xD;
+        &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.GroupAnagrams_SecondCase&lt;/TestId&gt;&#xD;
+      &lt;/TestAncestor&gt;&#xD;
+    &lt;/Or&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.Trap_SecondCase&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=247264c2_002Db143_002D4221_002Db317_002D3a5467ed239d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="RomanToInt_FirstCase_True" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;Or&gt;&#xD;
+      &lt;Or&gt;&#xD;
+        &lt;Or&gt;&#xD;
+          &lt;Or&gt;&#xD;
+            &lt;Or&gt;&#xD;
+              &lt;TestAncestor&gt;&#xD;
+                &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.RomanToInt_FirstCase_True&lt;/TestId&gt;&#xD;
+              &lt;/TestAncestor&gt;&#xD;
+              &lt;TestAncestor&gt;&#xD;
+                &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.StrStr_FirstCase_True&lt;/TestId&gt;&#xD;
+              &lt;/TestAncestor&gt;&#xD;
+            &lt;/Or&gt;&#xD;
+            &lt;TestAncestor&gt;&#xD;
+              &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.NumTeams_FirstCase_True&lt;/TestId&gt;&#xD;
+            &lt;/TestAncestor&gt;&#xD;
+          &lt;/Or&gt;&#xD;
+          &lt;TestAncestor&gt;&#xD;
+            &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.NumTeams_SecondCase_True&lt;/TestId&gt;&#xD;
+          &lt;/TestAncestor&gt;&#xD;
+        &lt;/Or&gt;&#xD;
+        &lt;TestAncestor&gt;&#xD;
+          &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.NumTeams_thirdCase_True&lt;/TestId&gt;&#xD;
+        &lt;/TestAncestor&gt;&#xD;
+      &lt;/Or&gt;&#xD;
+      &lt;TestAncestor&gt;&#xD;
+        &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.CompareVersion_thirdCase_True&lt;/TestId&gt;&#xD;
+      &lt;/TestAncestor&gt;&#xD;
+    &lt;/Or&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.NumberToWords_thirdCase_True&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=46d22ecf_002D772c_002D4423_002Db98c_002Db9743a366c91/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="IntToRoman_FirstCase_True" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.IntToRoman_FirstCase_True&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.RomanToInt_FirstCase_True&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=57a7659b_002Db364_002D43bf_002Db49c_002Dacc824ea70e4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="MaxPair_Compact_FirstApproach" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.MaxPair_Compact_FirstApproach&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=61155efd_002De3eb_002D4e84_002D8f4b_002Dad8a09d6e39e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SpiralOrder_SecondCase" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.SpiralOrder_SecondCase&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=68a3b131_002D5813_002D4727_002D98e3_002D35a445e045ed/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from RansomNotesTest.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;ProjectFile&gt;C1159000-6F34-4984-9E35-2E99BF4035AC/f:RansomNotesTest.cs&lt;/ProjectFile&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=69a151ca_002Deabf_002D44d8_002D941a_002D77f9a3a64ba6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="MaxPair_FirstCase" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.MaxPair_Fast_FirstApproach&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.MaxPair_Compact_FirstApproach&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7298797a_002D85ed_002D48a6_002D9406_002D09e5aeaeaed0/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetNewValue_Case1_True" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.GetNewValue_Case1_True&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.GetNewValue_Case2_True&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=743bb452_002De81f_002D433c_002D8bac_002Da7e0eb7398d3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="EquilibriumIndex__ReturnTrue" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.EquilibriumIndexTests.EquilibriumIndex__ReturnTrue&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=74d24c54_002Dfc12_002D4fd8_002Db2a7_002D4ea9e6d88e29/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="LengthOfLongestSubstring_SecondCase_True" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=79cd9c44_002Dffc6_002D492c_002Dabda_002D1f3e99409331/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="RemoveKDigits_Compact_FirstApproach" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.RemoveKDigits_Compact_FirstApproach&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7b241070_002Daf1e_002D43b0_002Db796_002D03389977c4e3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="finalInstances_Case2_True #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;Or&gt;&#xD;
+      &lt;TestAncestor&gt;&#xD;
+        &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.finalInstances_Case2_True&lt;/TestId&gt;&#xD;
+      &lt;/TestAncestor&gt;&#xD;
+      &lt;TestAncestor&gt;&#xD;
+        &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.finalInstances_Case1_True&lt;/TestId&gt;&#xD;
+      &lt;/TestAncestor&gt;&#xD;
+    &lt;/Or&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.abbas&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=837b8604_002D2478_002D4692_002D9038_002Dce423964ada9/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="MaxPair_Compact_FirstApproach #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.MaxPair_Compact_FirstApproach&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=892615f5_002D9937_002D4a00_002D8399_002Dea86a89f75bd/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="IsPalindrome" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;Or&gt;&#xD;
+      &lt;TestAncestor&gt;&#xD;
+        &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.IsPalindrome&lt;/TestId&gt;&#xD;
+      &lt;/TestAncestor&gt;&#xD;
+      &lt;TestAncestor&gt;&#xD;
+        &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.ReverseString&lt;/TestId&gt;&#xD;
+      &lt;/TestAncestor&gt;&#xD;
+    &lt;/Or&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.ReverseString_SecondCase&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c45c16cf_002D774d_002D4049_002D9d74_002D6144a5972cff/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="finalInstances_Case2_True" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.finalInstances_Case2_True&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d38b50fe_002D2b45_002D4726_002D864b_002D366fdd4d1037/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SpiralOrder_SecondCase #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.SpiralOrder_SecondCase&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e21b2aa7_002D1872_002D4649_002Da06a_002D08a92e239bdb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="RansomNotes_StringExists_ReturnTrue" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

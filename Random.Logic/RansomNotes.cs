@@ -4,10 +4,7 @@ namespace Random.Logic
 {
     public class RansomNotes
     {
-
-
         private readonly Dictionary<char, int> _characterCountsDictionary = new Dictionary<char, int>();
-
 
         private void GenerateCharacterDictionary(string input)
         {
@@ -30,7 +27,7 @@ namespace Random.Logic
 
             foreach (var character in ransomNotes)
             {
-                if (_characterCountsDictionary.ContainsKey(character)) 
+                if (_characterCountsDictionary.ContainsKey(character))
                 {
                     if (_characterCountsDictionary[character] > 0)
                     {
