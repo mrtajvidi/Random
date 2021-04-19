@@ -213,7 +213,7 @@ namespace Random.Logic
                     for (int c = c2 - 1; c > c1; c--) output.Add(matrix[r2][c]);
                     for (int r = r2; r > r1; r--) output.Add(matrix[r][c1]);
                 }
-                
+
                 r1++;
                 r2--;
                 c2--;
@@ -373,7 +373,7 @@ namespace Random.Logic
             return output.Trim(' ');
         }
 
-        public int FibonacciDynamicPro(int[] memoization, int n)
+        public int FibonacciDynamicProgrammingTopBottom(int[] memoization, int n)
         {
             if (memoization.Contains(n))
             {
@@ -398,8 +398,23 @@ namespace Random.Logic
                 return 1;
             }
 
-            memoization[n] = FibonacciDynamicPro(memoization, n - 1) + FibonacciDynamicPro(memoization, n - 2);
+            memoization[n] = FibonacciDynamicProgrammingTopBottom(memoization, n - 1) + FibonacciDynamicProgrammingTopBottom(memoization, n - 2);
             return memoization[n];
+        }
+
+        public int FibonacciDynamicProgrammingBottomUp(int n)
+        {
+            var memoize = new int[n];
+
+            memoize[0] = 0;
+            memoize[1] = 1;
+
+            for (int i = 3; i <= n; i++)
+            {
+                memoize[i] = memoize[i - 1] + memoize[i - 2];
+            }
+
+            return memoize[n];
         }
 
         public int[] CellCompete(int[] states, int days)
@@ -1060,6 +1075,96 @@ namespace Random.Logic
                 st.Push(current++);
             }
             return ans;
+        }
+
+        public int MinDeletions(string s)
+        {
+            var dict = new Dictionary<char, int>();
+
+            foreach (var ch in s)
+            {
+                if (dict.ContainsKey(ch))
+                {
+                    dict[ch]++;
+                }
+                else
+                {
+                    dict[ch] = 1;
+                }
+            }
+            var setOfOccurance = new HashSet<int>();
+            var countOfRemoval = 0;
+            foreach (var item in dict.Values)
+            {
+                var valueToBeAdded = item;
+                do
+                {
+                    if (!setOfOccurance.Contains(valueToBeAdded))
+                    {
+                        setOfOccurance.Add(valueToBeAdded);
+                        break;
+                    }
+                    else
+                    {
+                        countOfRemoval++;
+                        valueToBeAdded--;
+                    }
+                } while (valueToBeAdded > 0);
+            }
+            return countOfRemoval;
+        }
+
+        public int FindMinimumSwapsToMakePalindrome(string s)
+        {
+            var output = 0;
+            var stringArray = s.ToCharArray();
+
+            var headIndex = 0;
+            var tailIndex = s.Length - 1;
+
+            foreach (var ch in stringArray)
+            {
+                if (headIndex >= tailIndex)
+                {
+                    return output;
+                }
+
+                if (s[headIndex] == s[tailIndex])
+                {
+                    headIndex++;
+                    tailIndex--;
+                    continue;
+                }
+                else
+                {
+                    bool foundMatch = false;
+                    for (int j = tailIndex - 1; j > headIndex; j--)
+                    {
+                        if (s[j] == s[headIndex])
+                        {
+                            Swap(stringArray, tailIndex, j);
+                            output += 2 * (tailIndex - j - 1) + 1;
+                            foundMatch = true;
+                            break;
+                        }
+                    }
+
+                    if (!foundMatch)
+                        return -1;
+
+                    headIndex++;
+                    tailIndex--;
+                }
+            }
+
+            return output;
+        }
+
+        private void Swap(char[] inputArray, int firstIndex, int secondIndex)
+        {
+            var temp = inputArray[firstIndex];
+            inputArray[firstIndex] = inputArray[secondIndex];
+            inputArray[secondIndex] = temp;
         }
     }
 }

@@ -64,6 +64,11 @@
     &lt;/TestAncestor&gt;&#xD;
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5398dff7_002D1cc5_002D457f_002Db408_002Dfff716b036e6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="FibonacciDynamicPro_BottomUp_True" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.FibonacciDynamicPro_BottomUp_True&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=57a7659b_002Db364_002D43bf_002Db49c_002Dacc824ea70e4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="MaxPair_Compact_FirstApproach" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.MaxPair_Compact_FirstApproach&lt;/TestId&gt;&#xD;

@@ -186,9 +186,21 @@ namespace Random.Tests
         [InlineData(1, 1)]
         public void FibonacciDynamicPro_Case_True(int number, int expectedOutput)
         {
-            var actualOutput = _random.FibonacciDynamicPro(new int[number], number);
+            var actualOutput = _random.FibonacciDynamicProgrammingTopBottom(new int[number], number);
             Assert.Equal(expectedOutput, actualOutput);
         }
+
+        [Theory]
+        [InlineData(1, 1)]
+        [InlineData(2, 1)]
+        [InlineData(3, 1)]
+        [InlineData(0, 0)]
+        public void FibonacciDynamicPro_BottomUp_True(int number, int expectedOutput)
+        {
+            var actualOutput = _random.FibonacciDynamicProgrammingBottomUp(number);
+            Assert.Equal(expectedOutput, actualOutput);
+        }
+
 
         [Fact]
         public void GetNewValue_Case1_True()
@@ -378,6 +390,27 @@ namespace Random.Tests
             Assert.Equal(actualOutput, input);
         }
 
-       
+
+        [Theory]
+        [InlineData("aab", 0)]
+        [InlineData("aaabbbcc", 2)]
+        [InlineData("ceabaacb", 2)]
+        public void MinDelete_Works_True(string input, int expectedOutput)
+        {
+            var actualOutput = _random.MinDeletions(input);
+            Assert.Equal(expectedOutput, actualOutput);
+        }
+
+
+        [Theory]
+       // [InlineData("mamad", 3)]
+       // [InlineData("asflkj", -1)]
+        [InlineData("aabb", 2)]
+        //[InlineData("ntiin", 1)]
+        public void FindMinimumSwapsToMakePalindrome_Works_True(string input, int expectedOutput)
+        {
+            var actualOutput = _random.FindMinimumSwapsToMakePalindrome(input);
+            Assert.Equal(expectedOutput, actualOutput);
+        }
     }
 }
