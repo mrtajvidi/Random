@@ -201,7 +201,6 @@ namespace Random.Tests
             Assert.Equal(expectedOutput, actualOutput);
         }
 
-
         [Fact]
         public void GetNewValue_Case1_True()
         {
@@ -372,14 +371,13 @@ namespace Random.Tests
 
             var expectedOutput = new List<List<string>>();
 
-            expectedOutput.Add(new List<string>() {  "eat", "tea", "ate"});
+            expectedOutput.Add(new List<string>() { "eat", "tea", "ate" });
             expectedOutput.Add(new List<string>() { "nat", "tan" });
             expectedOutput.Add(new List<string>() { "bat" });
 
             var actualOutput = _random.GroupAnagrams(input);
             Assert.True(actualOutput[1][1] == expectedOutput[1][1]);
         }
-
 
         [Fact]
         public void SpiralOrder_SecondCase()
@@ -389,7 +387,6 @@ namespace Random.Tests
             var actualOutput = _random.SpiralOrder();
             Assert.Equal(actualOutput, input);
         }
-
 
         [Theory]
         [InlineData("aab", 0)]
@@ -401,15 +398,23 @@ namespace Random.Tests
             Assert.Equal(expectedOutput, actualOutput);
         }
 
-
         [Theory]
-       // [InlineData("mamad", 3)]
-       // [InlineData("asflkj", -1)]
+        // [InlineData("mamad", 3)]
+        // [InlineData("asflkj", -1)]
         [InlineData("aabb", 2)]
         //[InlineData("ntiin", 1)]
         public void FindMinimumSwapsToMakePalindrome_Works_True(string input, int expectedOutput)
         {
             var actualOutput = _random.FindMinimumSwapsToMakePalindrome(input);
+            Assert.Equal(expectedOutput, actualOutput);
+        }
+
+        [Fact]
+        public void MergeSort_Works_True()
+        {
+            var input = new List<int>(){ 8, 9, 5, 4, 3, 2, 10}; 
+            var expectedOutput = new List<int>(){ 2, 3, 4, 5, 8, 9, 10}; 
+            var actualOutput = _random.MergeSort(input);
             Assert.Equal(expectedOutput, actualOutput);
         }
     }

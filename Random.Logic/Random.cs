@@ -1166,5 +1166,68 @@ namespace Random.Logic
             inputArray[firstIndex] = inputArray[secondIndex];
             inputArray[secondIndex] = temp;
         }
+
+        public List<int> MergeSort(List<int> unsorted)
+        {
+            if (unsorted.Count <= 1)
+                return unsorted;
+
+
+            var middle = unsorted.Count / 2;
+            List<int> left = new List<int>();
+            List<int> right = new List<int>();
+
+            for (int i = 0; i < middle; i++)
+            {
+                left.Add(unsorted[i]);
+            }
+            for (int i = middle; i < unsorted.Count; i++)
+            {
+                right.Add(unsorted[i]);
+            }
+
+            left = MergeSort(left);
+            right = MergeSort(right);
+
+            return Merge(left, right);
+        }
+
+        private List<int> Merge(List<int> leftList, List<int> rightList)
+        {
+            List<int> result = new List<int>();
+
+            while (leftList.Count > 0 || rightList.Count > 0)
+            {
+                if (leftList.Count > 0 && rightList.Count > 0)
+                {
+                    var left = leftList.First();
+                    var right = rightList.First();
+                    if (left <= right)
+                    {
+                        result.Add(left);
+                        leftList.Remove(left);
+                    }
+                    else
+                    {
+                        result.Add(right);
+                        rightList.Remove(right);
+                    }
+                }
+                else if (leftList.Count > 0)
+                {
+                    var left = leftList.First();
+                    result.Add(left);
+                    leftList.Remove(left);
+                }
+                else if (rightList.Count > 0)
+                {
+                    var right = rightList.First();
+                    result.Add(right);
+                    rightList.Remove(right);
+                }
+            }
+
+            return result;
+        }
     }
 }

@@ -166,4 +166,9 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fbf6eba0_002De70c_002D49b4_002Dbbc1_002Dc096574874a9/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="MergeSort_Works_True" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.MergeSort_Works_True&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
