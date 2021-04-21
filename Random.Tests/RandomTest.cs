@@ -417,5 +417,25 @@ namespace Random.Tests
             var actualOutput = _random.MergeSort(input);
             Assert.Equal(expectedOutput, actualOutput);
         }
+
+
+        [Fact]
+        public void AreTheyEqual_Works_True()
+        {
+            var inputA = new int[] {1, 2, 3, 4, 5};
+            var inputB = new int[] {1, 4, 3, 2, 5};
+            var actualOutput = _random.AreTheyEqual(inputA, inputB);
+            Assert.True(actualOutput);
+        }
+
+
+        [Theory]
+        [InlineData("Zebra-493?", 3, "Cheud-726?")]
+        [InlineData("abcdefghijklmNOPQRSTUVWXYZ0123456789", 39, "nopqrstuvwxyzABCDEFGHIJKLM9012345678")]
+        public void RotationalCipher_Works_True(string input, int rotationFactor, string expectedOutput)
+        {
+            var actualOutput = _random.RotationalCipher(input, rotationFactor);
+            Assert.Equal(expectedOutput, actualOutput);
+        }
     }
 }

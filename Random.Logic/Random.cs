@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Text;
 
 namespace Random.Logic
 {
@@ -1172,7 +1173,6 @@ namespace Random.Logic
             if (unsorted.Count <= 1)
                 return unsorted;
 
-
             var middle = unsorted.Count / 2;
             List<int> left = new List<int>();
             List<int> right = new List<int>();
@@ -1228,6 +1228,60 @@ namespace Random.Logic
             }
 
             return result;
+        }
+
+        public bool AreTheyEqual(int[] arr_a, int[] arr_b)
+        {
+            Array.Sort(arr_a);
+            Array.Sort(arr_b);
+
+            for (int i = 0; i < arr_a.Length; i++)
+            {
+                if (arr_a[i] != arr_b[i])
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public string RotationalCipher(String input, int rotationFactor)
+        {
+            // Write your code here
+            var digitRotationCipher = rotationFactor % 10;
+            var alphabetRotationCipher = rotationFactor % 26;
+            
+            var alphabets = new char[]
+            {
+                'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U',
+                'V', 'W', 'X', 'Y', 'Z'
+            };
+            var digits = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+
+            var output = new StringBuilder();
+
+            foreach (var item in input)
+            {
+                if (Char.IsDigit(item))
+                {
+                    var mod = (int.Parse(item.ToString()) + digitRotationCipher) % 10;
+                    output.Append(mod.ToString());
+                }
+                else if (Char.IsLetter(item))
+                {
+                    var isLower = Char.IsLower(item);
+                    var characterToFind = isLower ? Char.ToUpper(item) : item;
+
+                    var mod = (Array.IndexOf(alphabets, characterToFind) + alphabetRotationCipher) % 26;
+                    output.Append(isLower ? Char.ToLower(alphabets[mod]) : Char.ToUpper(alphabets[mod]));
+                }
+                else
+                {
+                    output.Append(item);
+                }
+            }
+
+            return output.ToString();
         }
     }
 }
