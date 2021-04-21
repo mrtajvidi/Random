@@ -436,6 +436,16 @@ namespace Random.Tests
         {
             var actualOutput = _random.RotationalCipher(input, rotationFactor);
             Assert.Equal(expectedOutput, actualOutput);
+        }       
+        
+        
+        [Fact]
+        public void GetTotalTime_Works_True()
+        {
+            var input = new int[] { 4, 2, 1, 3 };
+            var expectedOutput = 26;
+            var actualOutput = _random.GetTotalTime(input);
+            Assert.Equal(expectedOutput, actualOutput);
         }
     }
 }

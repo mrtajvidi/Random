@@ -1250,7 +1250,7 @@ namespace Random.Logic
             // Write your code here
             var digitRotationCipher = rotationFactor % 10;
             var alphabetRotationCipher = rotationFactor % 26;
-            
+
             var alphabets = new char[]
             {
                 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U',
@@ -1282,6 +1282,19 @@ namespace Random.Logic
             }
 
             return output.ToString();
+        }
+
+        public int GetTotalTime(int[] arr)
+        {
+            Array.Sort(arr);
+            int sum = arr[arr.Length - 1];
+            int penalty = 0;
+            for (int i = arr.Length - 2; i >= 0; i--)
+            {
+                sum += arr[i];
+                penalty += sum;
+            }
+            return penalty;
         }
     }
 }
