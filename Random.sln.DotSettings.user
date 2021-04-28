@@ -152,9 +152,24 @@
     &lt;/TestAncestor&gt;&#xD;
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9441d46b_002D3ea0_002D404e_002Da7fe_002D35f6cb6106e6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="IsBalanced_Works_True" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.IsBalanced_Works_True&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.MySqrt_Works_True&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c45c16cf_002D774d_002D4049_002D9d74_002D6144a5972cff/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="finalInstances_Case2_True" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.finalInstances_Case2_True&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c6d4bfda_002Dc8e8_002D45ac_002D8edf_002Dfd45d53b0d84/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="BinarySearch_Case1_True" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.BinarySearch_Case1_True&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d38b50fe_002D2b45_002D4726_002D864b_002D366fdd4d1037/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SpiralOrder_SecondCase #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;

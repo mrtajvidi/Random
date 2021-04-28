@@ -412,22 +412,20 @@ namespace Random.Tests
         [Fact]
         public void MergeSort_Works_True()
         {
-            var input = new List<int>(){ 8, 9, 5, 4, 3, 2, 10}; 
-            var expectedOutput = new List<int>(){ 2, 3, 4, 5, 8, 9, 10}; 
+            var input = new List<int>() { 8, 9, 5, 4, 3, 2, 10 };
+            var expectedOutput = new List<int>() { 2, 3, 4, 5, 8, 9, 10 };
             var actualOutput = _random.MergeSort(input);
             Assert.Equal(expectedOutput, actualOutput);
         }
 
-
         [Fact]
         public void AreTheyEqual_Works_True()
         {
-            var inputA = new int[] {1, 2, 3, 4, 5};
-            var inputB = new int[] {1, 4, 3, 2, 5};
+            var inputA = new int[] { 1, 2, 3, 4, 5 };
+            var inputB = new int[] { 1, 4, 3, 2, 5 };
             var actualOutput = _random.AreTheyEqual(inputA, inputB);
             Assert.True(actualOutput);
         }
-
 
         [Theory]
         [InlineData("Zebra-493?", 3, "Cheud-726?")]
@@ -436,9 +434,8 @@ namespace Random.Tests
         {
             var actualOutput = _random.RotationalCipher(input, rotationFactor);
             Assert.Equal(expectedOutput, actualOutput);
-        }       
-        
-        
+        }
+
         [Fact]
         public void GetTotalTime_Works_True()
         {
@@ -446,6 +443,106 @@ namespace Random.Tests
             var expectedOutput = 26;
             var actualOutput = _random.GetTotalTime(input);
             Assert.Equal(expectedOutput, actualOutput);
+        }
+
+        [Theory]
+        [InlineData("{[()]}", true)]
+        [InlineData("{}()", true)]
+        [InlineData("{[}]", false)]
+        [InlineData("]", false)]
+        public void IsBalanced_Works_True(string input, bool expectedOutput)
+        {
+            var actualOutput = _random.IsBalanced(input);
+            Assert.Equal(expectedOutput, actualOutput);
+        }
+
+        [Theory]
+        [InlineData("abc", "bac")]
+        [InlineData("abcd", "bacd")]
+        [InlineData("abcxcba", "xbacbca")]
+        [InlineData("facebook", "eafcobok")]
+        public void FindEncryptedWordHelper_Works_True(string input, string expectedOutput)
+        {
+            var actualOutput = _random.FindEncryptedWordHelper(input);
+            Assert.Equal(expectedOutput, actualOutput);
+        }
+
+        //BalancedSplitExists
+        [Fact]
+        public void BalancedSplitExists_Case1_True()
+        {
+            var input = new int[] { 1, 5, 7, 1 };
+            var actualOutput = _random.BalancedSplitExists(input);
+            Assert.True(actualOutput);
+        }
+
+        //BalancedSplitExists
+        [Fact]
+        public void BalancedSplitExists_Case2_True()
+        {
+            var input = new int[] { 5, 7, 20, 12, 5, 7, 6, 14, 5, 5, 6 };
+            var actualOutput = _random.BalancedSplitExists(input);
+            Assert.True(actualOutput);
+        }
+
+        //BalancedSplitExists
+        [Fact]
+        public void BalancedSplitExists_Case1_False()
+        {
+            var input = new int[] { 12, 7, 6, 7, 6 };
+            var actualOutput = _random.BalancedSplitExists(input);
+            Assert.False(actualOutput);
+        }
+
+        //BalancedSplitExists
+        [Fact]
+        public void BalancedSplitExists_Case2_False()
+        {
+            var input = new int[] { 12, 7 };
+            var actualOutput = _random.BalancedSplitExists(input);
+            Assert.False(actualOutput);
+        }
+
+        //BalancedSplitExists
+        [Fact]
+        public void BalancedSplitExists_Case3_False()
+        {
+            var input = new int[] { 5, 7, 20, 12, 5, 7, 6, 7, 14, 5, 5, 6 };
+            var actualOutput = _random.BalancedSplitExists(input);
+            Assert.False(actualOutput);
+        }
+
+        [Fact]
+        public void BinarySearch_Case1_True()
+        {
+            var input = new int[] { -1, 0, 3, 5, 9, 12 };
+            int target = 9;
+            var actualOutput = _random.BinarySearch(input, target);
+            var expectedOutput = 4;
+            Assert.Equal(expectedOutput, actualOutput);
+        }
+
+        [Fact]
+        public void BinarySearch_Case2_True()
+        {
+            var input = new int[] { -1, 0, 3, 5, 9, 12 };
+            int target = 2;
+            var actualOutput = _random.BinarySearch(input, target);
+            var expectedOutput = -1;
+            Assert.Equal(expectedOutput, actualOutput);
+        }
+
+
+        [Theory]
+        [InlineData(8, 2)]
+        [InlineData(3, 1)]
+        [InlineData(9, 3)]
+        [InlineData(0, 0)]
+        [InlineData(1, 1)]
+        public void MySqrt_Works_True(int input, int expectedSqrt)
+        {
+            var actualOutput = _random.MySqrt(input);
+            Assert.Equal(expectedSqrt, actualOutput);
         }
     }
 }

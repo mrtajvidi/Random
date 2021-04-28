@@ -1296,5 +1296,157 @@ namespace Random.Logic
             }
             return penalty;
         }
+
+        public bool IsBalanced(string s)
+        {
+            var stack = new Stack<char>();
+
+            var endCharacters = new char[] { ']', '}', ')' };
+
+            foreach (var ch in s)
+            {
+                if (endCharacters.Contains(ch))
+                {
+                    var nextItem = stack.Peek();
+                    if (nextItem == null)
+                    {
+                        return false;
+                    }
+                    else if (ch == ')' && nextItem == '(')
+                    {
+                        stack.Pop();
+                    }
+                    else if (ch == ']' && nextItem == '[')
+                    {
+                        stack.Pop();
+                    }
+                    else if (ch == '}' && nextItem == '{')
+                    {
+                        stack.Pop();
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    stack.Push(ch);
+                }
+            }
+
+            return true;
+        }
+
+        public string FindEncryptedWordHelper(string s)
+        {
+            if (s.Length <= 2)
+            {
+                return s;
+            }
+
+            var sizeOfHalfOfString = s.Length / 2;
+            var midCharacterIndex = (sizeOfHalfOfString % 2 == 0) ? sizeOfHalfOfString - 1 : sizeOfHalfOfString;
+
+            var leftSubstring = s.Substring(0, midCharacterIndex);
+            var rightSubstring = s.Substring(midCharacterIndex + 1, s.Length - (midCharacterIndex + 1));
+
+            return s[midCharacterIndex] + FindEncryptedWordHelper(leftSubstring)
+                                        + FindEncryptedWordHelper(rightSubstring);
+        }
+
+        public bool BalancedSplitExists(int[] arr)
+        {
+            Array.Sort(arr);
+
+            if (arr.Length < 2) return false;
+
+            var forwardDictionary = new Dictionary<int, int>();
+            var backwardDictionary = new Dictionary<int, int>();
+
+            int cummulativeSum = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                forwardDictionary[i] = arr[i] + cummulativeSum;
+                cummulativeSum = forwardDictionary[i];
+            }
+
+            cummulativeSum = 0;
+            for (int i = arr.Length - 1; i >= 0; i--)
+            {
+                backwardDictionary[i] = arr[i] + cummulativeSum;
+                cummulativeSum = backwardDictionary[i];
+            }
+
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                if (backwardDictionary[i + 1] == forwardDictionary[i] && arr[i] != arr[i + 1])
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public int BinarySearch(int[] nums, int target)
+        {
+            var output = BinarySearchHelper(nums, 0, nums.Length - 1, target);
+            return output;
+        }
+
+        private int BinarySearchHelper(int[] sums, int startIndex, int endIndex, int target)
+        {
+            if (startIndex > endIndex)
+            {
+                return -1;
+            }
+
+            int midIndex = (endIndex + startIndex) / 2;
+
+            if (sums[midIndex] == target)
+            {
+                return midIndex;
+            }
+            else if (target < sums[midIndex])
+            {
+                return BinarySearchHelper(sums, startIndex, midIndex - 1, target);
+            }
+            else
+            {
+                return BinarySearchHelper(sums, midIndex + 1, endIndex, target);
+            }
+        }
+
+        public int MySqrt(int x)
+        {
+            if (x < 2)
+            {
+                return x;
+            }
+
+            int start = 2;
+            int end = x / 2;
+
+            while (start <= end)
+            {
+                var pivot = start + (end - start) / 2;
+                var sqrt = (long)pivot * pivot;
+
+                if (sqrt > x)
+                {
+                    end = pivot - 1;
+                }
+                else if (sqrt < x)
+                {
+                    start = pivot + 1;
+                }
+                else
+                {
+                    return pivot;
+                }
+            }
+
+            return end;
+        }
     }
 }
