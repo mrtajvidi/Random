@@ -1448,5 +1448,116 @@ namespace Random.Logic
 
             return end;
         }
+
+        private int myGuess;
+
+        public void InitialGuess(int guess)
+        {
+            myGuess = guess;
+        }
+
+        public int GuessNumber(int n)
+        {
+            var start = 1;
+            var end = n;
+
+            while (start <= end)
+            {
+                var mid = start + (end - start) / 2;
+                var guessResult = Guess(mid);
+                if (guessResult == 0)
+                {
+                    return mid;
+                }
+                else if (guessResult == 1)
+                {
+                    end = mid - 1;
+                }
+                else
+                {
+                    start = mid + 1;
+                }
+            }
+
+            return -1;
+        }
+
+        private int Guess(int mid)
+        {
+            if (mid < myGuess)
+            {
+                return -1;
+            }
+            else if (mid == myGuess)
+            {
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+
+        public int Search(int[] nums, int target)
+        {
+            var start = 0;
+            var end = nums.Length - 1;
+
+            while (start <= end)
+            {
+                var midIndex = start + (end - start) / 2;
+
+                if (nums[midIndex] == target)
+                {
+                    return midIndex;
+                }
+                else if (nums[midIndex] >= nums[start])
+                {
+                    if (target >= nums[start] && target < nums[midIndex])
+                    {
+                        end = midIndex - 1;
+                    }
+                    else
+                    {
+                        start = midIndex + 1;
+                    }
+                }
+                else
+                {
+                    if (target <= nums[end] && target > nums[midIndex])
+                    {
+                        start = midIndex + 1;
+                    }
+                    else
+                    {
+                        end = midIndex - 1;
+                    }
+                }
+            }
+
+            return -1;
+        }
+
+
+        public int[] GetMilestoneDays(int[] revenues, int[] milestones)
+        {
+            Array.Sort(milestones);
+            var output = new List<int>();
+            var indMileStones = 0;
+            var totalRevenue = 0;
+            for (int i = 0; i < revenues.Length; i++)
+            {
+                totalRevenue += revenues[i];
+                if (totalRevenue >= milestones[indMileStones])
+                {
+                    output.Add(i + 1);
+                    indMileStones++;
+                    if (indMileStones > revenues.Length - 1)
+                        return output.ToArray();
+                }
+            }
+            // Write your code here
+            return output.ToArray();
+        }
     }
 }

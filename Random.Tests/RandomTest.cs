@@ -532,7 +532,6 @@ namespace Random.Tests
             Assert.Equal(expectedOutput, actualOutput);
         }
 
-
         [Theory]
         [InlineData(8, 2)]
         [InlineData(3, 1)]
@@ -543,6 +542,39 @@ namespace Random.Tests
         {
             var actualOutput = _random.MySqrt(input);
             Assert.Equal(expectedSqrt, actualOutput);
+        }
+
+        [Theory]
+        [InlineData(10, 6)]
+        //[InlineData(3, 1)]
+        //[InlineData(9, 3)]
+        //[InlineData(0, 0)]
+        //[InlineData(1, 1)]
+        public void GuessNumber_Works_True(int input, int expectedOutput)
+        {
+            _random.InitialGuess(expectedOutput);
+            var actualOutput = _random.GuessNumber(input);
+            Assert.Equal(expectedOutput, actualOutput);
+        }
+
+        [Theory]
+        [InlineData(new int[] { 4, 5, 6, 7, 0, 1, 2 }, 0, 4)]
+        [InlineData(new int[] { 4, 5, 6, 7, 0, 1, 2 }, 3, -1)]
+        [InlineData(new int[] { 1 }, 0, -1)]
+        public void Search_Works_True(int[] nums, int target, int expectedIndex)
+        {
+            var actualOutput = _random.Search(nums, target);
+            Assert.Equal(expectedIndex, actualOutput);
+        }
+
+
+        [Theory]
+        [InlineData(new int[] { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 }, new int[] {100, 200, 500}, new int[] {4, 6, 10})]
+        
+        public void GetMilestoneDays_Works_True(int[] revenues, int[] milestones, int[] expectedResults)
+        {
+            var actualOutput = _random.GetMilestoneDays(revenues, milestones);
+            Assert.Equal(expectedResults, actualOutput);
         }
     }
 }
