@@ -1559,5 +1559,40 @@ namespace Random.Logic
             // Write your code here
             return output.ToArray();
         }
+
+
+        public int[] CountSubArrays(int[] arr)
+        {
+            var output = new List<int>();
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                var countSubArrays = 1;
+                var prevIndx = i;
+                while (prevIndx - 1 >= 0)
+                {
+                    if (arr[prevIndx - 1] > arr[i])
+                    {
+                        break;
+                    }
+                    prevIndx--;
+                }
+                countSubArrays += i - (prevIndx > 0 ? prevIndx : 0);
+
+                var nextIndx = i;
+                while (nextIndx + 1 < arr.Length)
+                {
+                    if (arr[nextIndx + 1] > arr[i])
+                    {
+                        break;
+                    }
+                    nextIndx++;
+                }
+                countSubArrays += (nextIndx > 0 ? nextIndx : 0) - i;
+                output.Add(countSubArrays);
+            }
+
+            return output.ToArray();
+        }
     }
 }

@@ -576,5 +576,14 @@ namespace Random.Tests
             var actualOutput = _random.GetMilestoneDays(revenues, milestones);
             Assert.Equal(expectedResults, actualOutput);
         }
+
+
+        [Theory]
+        [InlineData(new int[] { 2, 4, 7, 1, 5, 3 }, new int[] { 1, 2, 6, 1, 3, 1 })]
+        public void CountSubArrays_Works_True(int[] input, int[] expected)
+        {
+            var actualOutput = _random.CountSubArrays(input);
+            Assert.Equal(expected, actualOutput);
+        }
     }
 }
