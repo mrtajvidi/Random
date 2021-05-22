@@ -1538,7 +1538,6 @@ namespace Random.Logic
             return -1;
         }
 
-
         public int[] GetMilestoneDays(int[] revenues, int[] milestones)
         {
             Array.Sort(milestones);
@@ -1559,7 +1558,6 @@ namespace Random.Logic
             // Write your code here
             return output.ToArray();
         }
-
 
         public int[] CountSubArrays(int[] arr)
         {
@@ -1593,6 +1591,70 @@ namespace Random.Logic
             }
 
             return output.ToArray();
+        }
+
+        public int GetBillionUsersDay(float[] growthRates)
+        {
+            var start = 0;
+            var end = 200;
+            long previousSum = 1_000_000_001;
+
+            while (start < end)
+            {
+                var mid = start + (end - start) / 2;
+
+                var currentSum = CalculateSum(growthRates, mid);
+
+                if ((currentSum >= 1000000000 && previousSum >= 1000000000) || (currentSum <= 1000000000 && previousSum <= 1000000000) || currentSum == 1000000000)
+                {
+                    return mid;
+                }
+                else if (currentSum < 1000000000)
+                {
+                    start = mid + 1;
+                }
+                else
+                {
+                    end = mid - 1;
+                }
+                previousSum = currentSum;
+            }
+            return -1;
+        }
+
+        private long CalculateSum(float[] growthRates, int power)
+        {
+            var sum = 0.0;
+            foreach (var item in growthRates)
+            {
+                sum += Math.Pow(item, power);
+            }
+            return (long)sum;
+        }
+
+        public int MinProduct(int a, int b)
+        {
+            int smaller = a < b ? a : b;
+            int bigger = a < b ? b : a;
+            return MinProductHelper(smaller, bigger);
+        }
+
+        private int MinProductHelper(int smaller, int bigger)
+        {
+            if (smaller == 0) return 0;
+            if (smaller == 1) return bigger;
+
+            int half = smaller / 2;
+            int halfProduct = MinProductHelper(half, bigger);
+
+            if (smaller % 2 == 0)
+            {
+                return halfProduct + halfProduct;
+            }
+            else
+            {
+                return halfProduct + halfProduct + bigger;
+            }
         }
     }
 }

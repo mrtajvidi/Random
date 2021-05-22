@@ -79,6 +79,11 @@
     &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.SpiralOrder_SecondCase&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6558d1eb_002D8084_002D4556_002Da027_002Daebcb262c564/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="MinProduct_Works_True" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.MinProduct_Works_True&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=68a3b131_002D5813_002D4727_002D98e3_002D35a445e045ed/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from RansomNotesTest.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;ProjectFile&gt;C1159000-6F34-4984-9E35-2E99BF4035AC/f:RansomNotesTest.cs&lt;/ProjectFile&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
@@ -161,6 +166,11 @@
       &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.MySqrt_Works_True&lt;/TestId&gt;&#xD;
     &lt;/TestAncestor&gt;&#xD;
   &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b9fb7923_002D73b9_002D424c_002Dafda_002D2b2ee779f55c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetBillionUsersDay_Works_True" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::C1159000-6F34-4984-9E35-2E99BF4035AC::.NETCoreApp,Version=v3.1::Random.Tests.RandomTest.GetBillionUsersDay_Works_True&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c45c16cf_002D774d_002D4049_002D9d74_002D6144a5972cff/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="finalInstances_Case2_True" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;

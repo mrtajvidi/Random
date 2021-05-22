@@ -585,5 +585,27 @@ namespace Random.Tests
             var actualOutput = _random.CountSubArrays(input);
             Assert.Equal(expected, actualOutput);
         }
+
+        [Theory]
+        [InlineData(new float[] { 1.1f, 1.2f, 1.3f }, 79)]
+        public void GetBillionUsersDay_Works_True(float[] input, int expected)
+        {
+            var actualOutput = _random.GetBillionUsersDay(input);
+            Assert.Equal(expected, actualOutput);
+        }
+
+        [Theory]
+        [InlineData(8, 5, 40)]
+        [InlineData(3, 1, 3)]
+        [InlineData(9, 3, 27)]
+        [InlineData(0, 1, 0)]
+        [InlineData(1, 1, 1)]
+        [InlineData(-1, 5, -5)]
+        [InlineData(-3, -2, 6)]
+        public void MinProduct_Works_True(int input1, int input2, int expectedOutput)
+        {
+            var actualOutput = _random.MinProduct(input1, input2);
+            Assert.Equal(expectedOutput, actualOutput);
+        }
     }
 }
