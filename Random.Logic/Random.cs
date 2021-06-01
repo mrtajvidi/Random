@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.GraphModel;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -1656,5 +1657,94 @@ namespace Random.Logic
                 return halfProduct + halfProduct + bigger;
             }
         }
+
+        private int[] memo;
+
+        public int CoinChange(int[] coins, int amount)
+        {
+            memo = new int[amount + 1];
+            return CoinChangeHelper(coins, amount);
+        }
+
+        private int CoinChangeHelper(int[] coins, int remain)
+        {
+            if (remain < 0) return -1;
+            if (remain == 0) return 0;
+
+            if (memo[remain] != 0) return memo[remain];
+
+            int minCount = Int32.MaxValue;
+            foreach (var coin in coins)
+            {
+                int count = CoinChangeHelper(coins, remain - coin);
+                if (count == -1) continue;
+
+                minCount = Math.Min(minCount, count + 1);
+            }
+
+            memo[remain] = minCount == Int32.MaxValue ? -1 : minCount;
+
+            return memo[remain];
+        }
+
+        public int CoinChangeIteration(int[] coins, int amount)
+        {
+            Array.Sort(coins);
+            int[] memo = new int[amount + 1];
+            for (int i = 0; i <= amount; i++)
+            {
+                memo[i] = amount + 1;
+            }
+
+            memo[0] = 0;
+
+            for (int i = 0; i <= amount; i++)
+            {
+                for (int j = 0; j < coins.Length; j++)
+                {
+                    if (coins[j] <= i)
+                    {
+                        memo[i] = Math.Min(memo[i], memo[i - coins[j]] + 1);
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+            }
+
+            return memo[amount] > amount ? -1 : memo[amount];
+        }
+
+        public int ArrayPairSum(int[] nums)
+        {
+            Array.Sort(nums);
+            var sum = 0;
+            for (int i = 0; i < nums.Length; i += 2)
+            {
+                sum += Math.Min(nums[i], nums[i + 1]);
+            }
+            return sum;
+        }
+
+
+    }
+
+    public class Node {
+        public GraphNode GraphNode { get; set; }
+        public State State { get; set; }
+
+        public Node(GraphNode graphNode, State state = State.Unvisited)
+        {
+            GraphNode = graphNode;
+            State = state;
+        }
+    }
+
+    public enum State
+    {
+        Unvisited,
+        Visited,
+        Visiting
     }
 }

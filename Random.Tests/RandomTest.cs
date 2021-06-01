@@ -607,5 +607,32 @@ namespace Random.Tests
             var actualOutput = _random.MinProduct(input1, input2);
             Assert.Equal(expectedOutput, actualOutput);
         }
+
+
+        [Theory]
+        [InlineData(new int[] { 1, 2, 5 }, 11, 3)]
+        public void CoinChange_Works_True(int[] input, int targetAmount, int expected)
+        {
+            var actualOutput = _random.CoinChange(input, targetAmount);
+            Assert.Equal(expected, actualOutput);
+        }
+        
+        [Theory]
+        [InlineData(new int[] { 1, 2, 5 }, 11, 3)]
+        public void CoinChangeIteration_Works_True(int[] input, int targetAmount, int expected)
+        {
+            var actualOutput = _random.CoinChangeIteration(input, targetAmount);
+            Assert.Equal(expected, actualOutput);
+        }
+
+        [Theory]
+        [InlineData(new int[] { 1, 4, 3, 2 }, 4)]
+        [InlineData(new int[] { 6, 2, 6, 5, 1, 2 }, 9)]
+        public void ArrayPairSum_Works_True(int[] input, int expected)
+        {
+            var actualOutput = _random.ArrayPairSum(input);
+            Assert.Equal(expected, actualOutput);
+        }
+
     }
 }
